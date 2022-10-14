@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 		<!-- header -->
 		<header>
 			<div>
-				<h1><a href="index.html">Bloom Tech Bar and Grill</a></h1>
+			<h1><a href="index.html">Bloomtech Bar and Grill</a></h1>
 			</div>
 				<!-- nav -->
 				<div class="buttons">
@@ -25,38 +26,40 @@
 					<a href="specialoffers.html">Special Offers</a>
 					<a href="contact.html">Contact</a>
 				</div>
-			<div class="brands">
-				<i class="fa-brands fa-twitter">Twitter</i>
-				<i class="fa-brands fa-instagram">Instagram</i>
-				<i class="fa-brands fa-facebook">Facebook</i>
+				<div class="brands">
+					<div class="twitter"><i class="fa-brands fa-twitter">Twitter</i></div>
+					<div class="instagram"><i class="fa-brands fa-instagram">Instagram</i></div>
+					<div class="facebook"><i class="fa-brands fa-facebook">Facebook</i></div>
+				</div>
 			</div>
 		</header>
 
 		<!-- gallery section -->
 		<section class="gallery">
 			<div>
-				<h2>OUR FOOD</h2>
-				<div class="row">
-					<img src="img/food-avocadotoast.jpg"/>
+				<section class="ourfd"><h2>OUR FOOD</h2></section>
+					<div class="row">
+						<img src="img/food-avocadotoast.jpg"/>
+						<br>
+						<img src="img/food-burger.jpg"/>
+						<br>
+						<img src="img/food-poutine.jpg"/>
+					</div>
+					<div class="row2">
+						<img src="img/food-ribs.jpg"/>
 
-					<img src="img/food-burger.jpg"/>
+						<img src="img/food-sandwich.jpg"/>
 
-					<img src="img/food-poutine.jpg"/>
-				</div>
-				<div class="row"></div>
-					<img src="img/food-ribs.jpg"/>
+						<img src="img/food-sausage.jpg"/>
+					</div>
+					<div class="row3">
+						<img src="img/food-steak.jpg"/>
 
-					<img src="img/food-sandwich.jpg"/>
+						<img src="img/food-tacos.jpg"/>
 
-					<img src="img/food-sausage.jpg"/>
-				</div>
-				<div class="row">
-					<img src="img/food-steak.jpg"/>
-
-					<img src="img/food-tacos.jpg"/>
-
-					<img src="img/food-wings.jpg"/>
-				</div>
+						<img src="img/food-wings.jpg"/>
+					</div>
+				</section>
 			</div>
 		</section>
 
@@ -134,15 +137,20 @@
 		<!-- footer -->
 		<footer>
 			<!-- email signup -->
-			Join our mailing list!
-			Sign Up
+			<h4>Join our mailing list!</h4>
+			<button class="signup"><label for="email">Sign Up</label>
+
+				<input type="email" id="email"
+					   pattern=".+@globex\.com" size="50" required></button>
 			<!-- nav -->
-			Menu
-			Reservations
-			Special Offers
-			Contact
+			<div class="buttonsf">
+					<div class="menu"><a href="menu.html">Menu</a></div>
+					<div class="reser"><a href="reservations.html">Reservations</a></div>
+					<div class="spo"><a href="specialoffers.html">Special Offers</a></div>
+					<div class="cont"><a href="contact.html">Contact</a></div>
+			</div>
 			<!-- copyright -->
-			©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.
+			<p>©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.</p>
 		</footer>
 	</div>
 </body>

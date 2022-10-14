@@ -99,26 +99,48 @@ div.buttons, h1, div.brands{
     color: rgb(225, 239, 230);
     background: rgb(0, 4, 17); 
     background-color: rgb(0, 4, 17, .8);
+    background-size: cover;
 }
-h1{
+h1 a{
    display: flex;
    justify-content: center; 
+   font-size: 9rem;
+   color: rgb(225, 239, 230);
 }
-.buttons{
-    color:red;
+header .buttons{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+}
+button{
+    background: transparent; 
+    background-color: transparent;
+    margin: 0%;
+    padding: 0%;
+}
+.buttons a{
+    background: transparent; 
+    color: rgb(225, 239, 230);
+    font-size: 6rem;
 }
 .brands{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: large;
+    display: inline-flex;
+    font-size: 5rem;
 }
+.brands .twitter{
+    margin-left: 43%;
+}
+.brands .instagram{
+    margin-left:25px;
+    margin-right:25px;
+}
+
+
 
 /* spacers */
 .spacer {
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -127,29 +149,62 @@ h1{
     background-color: rgb(0, 4, 17);
 }
 
+
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
     text-align: center;
-    background-color: black;
-}
-div.row.img{
+    background-color:black; 
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-evenly;
 }
+.ourfd h2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 10rem;
+}
+.row{
+    display:flex;
+    max-width: 100%;
+    max-height: auto;
+    width: 100%;
+    height:20vh;
+    margin: 25px;
+    justify-content: space-evenly;
+}
+.row2{
+    display:flex;
+    max-width: 100%;
+    max-height: auto;
+    width: 100%;
+    height: 20vh;
+    margin: 25px;
+    padding:0px;
+    justify-content: space-evenly;
+}
+.row3{
+    display:flex;
+    max-width: 100%;
+    max-height: auto;
+    width:100%;
+    height: 20vh;
+    margin: 25px;
+    padding:0px;
+    justify-content: space-evenly;
+}
+
 
 
 /* about us section */
 .about {
     width: 100%;
-    height: 75vh;
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    color: white;
 }
 
 .about-container {
@@ -159,15 +214,29 @@ div.row.img{
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 4, 17, .8);
+    border:10px;
 }
 
 .about h2 {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 10rem;
+    margin: 10px;
+}
+.about h3{
+    font-size: 7rem;
+    font-weight: bolder;
+    margin: 10px;
 }
 
 .about-container .text {
-    width: 50%;
+    width: 75%;
 }
+.about-container .text p{
+    font-size: 5rem;
+}
+
 
 /* contact us section */
 .contact {
@@ -179,22 +248,29 @@ div.row.img{
     background-color: rgb(0, 4, 17);
 }
 
+
 .contact-container {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 4, 17, .8);
+    color:white;
 }
 
 .contact h2 {
     padding-top: 5vh;
+    font-size: 4rem;
+    font-weight: bolder;
 }
 
 .contact h3 {
     padding-top: 2.5vh;
+    font-size: 3rem;
+    font-weight: bolder;
 }
 
 .contact p {
     padding: .5vh 0;
+    font-size: 2rem;
 }
 
 .info {
@@ -215,23 +291,122 @@ div.row.img{
 .contacts {
     width: 25%;
 }
-
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
-    padding-top: 2.5vh;
+    height: 10vh;
     font-size: 3rem;
+    color: rgb(225, 239, 230);
+    background: rgb(0, 4, 17);
+    flex-direction: column;
+}
+footer h4{
+    font-size: 3rem;
+    text-align: start;
+    height: fit-content;
+    width: fit-content;
+    margin: 0%;
+}
+footer button label{
+    font-size: 3rem;
+    height: 45px;
+    background-color: white;
+    display: inline-flex;
+}
+input#email{
+    height: 35px;
+    width: 255px;
+    display: inline-flex;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+footer p{
+    font-size: 2rem;
+    height: fit-content;
+    display: flex;
+    justify-content: right;
+}
+.buttonsf{
+    height: fit-content;
+    display: inline-flex;
+    margin-left: 150px;
+}
+.buttonsf a{
+    color:rgb(225, 239, 230);
+    font-size: 3rem;
+    margin: 25px;
+    display: inline-flex;
+    height: fit-content;  
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+    h1 a{
+        text-align: center;
+        font-size: 7rem;
+    }
+    header .buttons{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .buttons a{
+        font-size: 3rem;
+    }
+    .brands{
+        font-size: 2rem;
+        justify-content: center;
+    }
+    .brands .twitter{
+        margin-left: 0%;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
+    }
+    .ourfd h2{
+        font-size: 6rem;
+        margin: 20px;
+    }
+    .row{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 0%;
+    }
+    .row img{
+        margin: 5px;
+    }
+    .row2{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+    .row2 img{
+        margin: 10px;
+    }
+    .row3{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 0%;
+    }
+    .row3 img{
+        margin: 10px;
     }
     
     /* about us section */
@@ -239,10 +414,18 @@ footer {
     .about {
         height: 200vh;
     }
-    
     .about h2 {
         width: 100%;
         padding-top: 5vh;
+        font-size: 7rem;
+        margin-bottom: 10%;
+    }
+    .about h3{
+        font-size: 5rem;
+    
+    }
+    .about .text p{
+        font-size: 2.5rem;
     }
     
     .about-container .text {
@@ -277,5 +460,40 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    footer h4{
+        margin-right: 0%;
+        margin-left: 20%;
+    }
+    .signup{
+        margin-left: 8%;
+    }
+    footer .buttonsf{
+        flex-direction: column;
+        margin: 0%;
+    }
+    .buttonsf a{
+        font-size: 3rem;
+        margin: 10px;
+    }
+    .buttonsf .menu{
+        margin-left: 37%;
+    }
+    .buttonsf{
+        display: flex;
+    }
+    .buttonsf .reser{
+        margin-left: 26%;
+    }
+    .buttonsf .spo{
+        margin-left: 25%;
+    }
+    .buttonsf .cont{
+        margin-left: 34%;
+    }
+    footer p{
+        font-size: 1.5rem;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }

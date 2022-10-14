@@ -94,12 +94,53 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
 }
-
-/* spacer */
+div.buttons, h1, div.brands{
+    color: rgb(225, 239, 230);
+    background: rgb(0, 4, 17); 
+    background-color: rgb(0, 4, 17, .8);
+    background-size: cover;
+}
+h1 a{
+   display: flex;
+   justify-content: center; 
+   font-size: 9rem;
+   color: white;
+}
+header .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+button{
+    background: transparent; 
+    background-color: transparent;
+    margin: 0%;
+    padding: 0%;
+}
+.buttons a{
+    background: transparent; 
+    color: rgb(225, 239, 230);
+    font-size: 6rem;
+}
+.brands{
+    display: inline-flex;
+    font-size: 5rem;
+}
+.brands .twitter{
+    margin-left: 43%;
+}
+.brands .instagram{
+    margin-left:25px;
+    margin-right:25px;
+}
+/* spacers */
 .spacer {
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -114,18 +155,132 @@ header {
     width: 100%;
     height: auto;
     background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color :rgb(225, 239, 230);
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    font-size: 5rem;
+    font-weight: bolder;
+    display:flex;
+    margin:5px;
+    padding:auto;
+    text-align: start;
+}
+h4{
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    margin: 5px;
+    justify-content: space-evenly;
+    display: inline-flex;
+    margin-right: 13%;
+    
+}
+h4 p{
+    font-size: 2.5rem;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    margin: 2px;
+    text-align: start;
+}
+.menu-section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: start;
+}
+.menu-item{
+    justify-content: space-evenly;
+    margin: 10px;
+    width: 700px;
+}
+.menu-container{
+    justify-content: space-evenly;
+    background-color: rgb(0, 4, 17, .8);
+}
+.sse{
+    display:inline-flex;
+    width: 500px;
+    column-count: 2;
+    justify-content: space-evenly;
+    margin: 160px;
+    margin-top: 80px;
+}
+.des{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    background-color: rgb(0, 4, 17, .8);
+    width: 100%;
+}
+.dap{
+    display: inline-flex;
+    height: fit-content;
+    width:500px;
+    justify-content: space-evenly;
+    margin:160px;
+    margin-bottom: 0px;
 }
 
+
 /* footer section */
+
 footer {
     width: 100%;
-    height: 15vh;
-    padding-top: 2.5vh;
+    height: 10vh;
     font-size: 3rem;
+    color: rgb(225, 239, 230);
+    background: rgb(0, 4, 17);
+    flex-direction: column;
+}
+footer h4{
+    font-size: 3rem;
+    text-align: start;
+    height: fit-content;
+    width: fit-content;
+    margin: 0%;
+}
+footer button label{
+    font-size: 3rem;
+    height: 45px;
+    background-color: white;
+    display: inline-flex;
+}
+input#email{
+    height: 35px;
+    width: 255px;
+    display: inline-flex;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+footer p{
+    font-size: 2rem;
+    height: fit-content;
+    display: flex;
+    justify-content: right;
+}
+.buttonsf{
+    height: fit-content;
+    display: inline-flex;
+    margin-left: 150px;
+}
+.buttonsf a{
+    color:rgb(225, 239, 230);
+    font-size: 3rem;
+    margin: 25px;
+    display: inline-flex;
+    height: fit-content;  
 }
 
 /* mobile media query */
@@ -136,11 +291,78 @@ footer {
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
+        background-image: url('../img/menu-header.jpg');
+    }
+    h1 a{
+        text-align: center;
+        font-size: 7rem;
+    }
+    header .buttons{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .buttons a{
+        font-size: 3rem;
+    }
+    .brands{
+        font-size: 2rem;
+        justify-content: center;
+    }
+    .brands .twitter{
+        margin-left: 0%;
     }
 
     /* menu */
     .menu {
         background-image: none;
+        color: rgb(0, 4, 17);
+        background:  rgb(225, 239, 230);
+    }
+    .menu-container{
+        background:  rgb(225, 239, 230);
+        border: rgb(0, 4, 17);
+        flex-direction: column;
+        
+    }
+    .menu h2{
+        font-size: 6rem;
+        font-weight: bolder;
+        border-bottom: 1rem solid rgb(0, 4, 17);
+        width: fit-content;
+        margin-left: 10%;
+    }
+    h3{
+        width: 300px;
+        border: 5px solid rgb(0, 4, 17);
+        justify-content: center;
+    }
+    h4{
+        margin: 0%;
+        width: 300px;
+    }
+    .menu-item{
+        border-bottom: 5px solid rgb(0, 4, 17) ;
+        width: 300px;
+    }
+    .dap{
+        margin: 0%;
+        margin-left: 16%;
+        width: 300px;
+    }
+    .sse{
+        margin: 0%;
+        margin-left: 16%;
+        width: 300px;
+    }
+    P{
+        width: 300px;
+        text-align: center;
+    }
+
+    .des{
+        background:  rgb(225, 239, 230);
+        border: rgb(0, 4, 17);
     }
 
     /* footer section */
@@ -148,5 +370,40 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    footer h4{
+        margin-right: 0%;
+        margin-left: 20%;
+    }
+    .signup{
+        margin-left: 8%;
+    }
+    footer .buttonsf{
+        flex-direction: column;
+        margin: 0%;
+    }
+    .buttonsf a{
+        font-size: 3rem;
+        margin: 10px;
+    }
+    .buttonsf .menus{
+        margin-left: 39%;
+    }
+    .buttonsf{
+        display: flex;
+    }
+    .buttonsf .reser{
+        margin-left: 26%;
+    }
+    .buttonsf .spo{
+        margin-left: 25%;
+    }
+    .buttonsf .cont{
+        margin-left: 34%;
+    }
+    footer p{
+        font-size: 1.5rem;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
